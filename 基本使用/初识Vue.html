@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <script src="../vue.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="root">
+    <h1>hello,{{name}}</h1>
+  </div>
+
+  <script type="text/javascript">
+    // 创建Vue实例
+    const vm = new Vue({
+      // el 用于指定当前Vue实例为哪个容器服务，值通常为CSS选择器字符串
+      el: '#root',
+      data: {
+        name: 'Vue'
+      }
+    })
+  </script>
+</body>
+
+</html>
