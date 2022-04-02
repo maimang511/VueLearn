@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <script src="../vue.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <div id="root">
+    <h1>插值语法</h1>
+    <!-- 功能：用于解析标签内容 -->
+    <h3>{{name}}</h3>
+
+    <!-- v-bind 简写 ： -->
+    <h1>指令语法</h1>
+    <!-- 功能：用于解析标签 -->
+    <a v-bind:href="url">btn</a>
+  </div>
+
+  <script type="text/javascript">
+    // 创建Vue实例
+    const vm = new Vue({
+      // el 用于指定当前Vue实例为哪个容器服务，值通常为CSS选择器字符串
+      el: '#root',
+      // data中用于存储数据，数据供el所指定的容器去使用，值我们暂时先写成一个对象
+      data: {
+        name: 'Vue',
+        url: 'www.baidu.com'
+      }
+    })
+  </script>
+</body>
+
+</html>
