@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <script src="../vue.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+
+  <!--  vue 实例是和容器一一对应的 -->
+
+  <div id="root">
+    单项数据绑定： <input type="text" v-bind:value="name"> <br />
+    双项数据绑定： <input type="text" v-model:value="name">
+    简写： 双项数据绑定： <input type="text" v-model="name">
+    因为 v-model 默认找的就是value
+    v-model 只能应用在表单内元素（输入类元素）
+
+  </div>
+
+  <script type="text/javascript">
+    // 创建Vue实例
+    const vm = new Vue({
+      // el 用于指定当前Vue实例为哪个容器服务，值通常为CSS选择器字符串
+      el: '#root',
+      // data中用于存储数据，数据供el所指定的容器去使用，值我们暂时先写成一个对象
+      data: {
+        name: 'Vue'
+      }
+    })
+  </script>
+</body>
+
+</html>
